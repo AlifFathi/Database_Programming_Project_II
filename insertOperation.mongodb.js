@@ -1,5 +1,6 @@
 use("libraryDB");
 
+// Insert a new user into the users collection using insertOne()
 db.users.insertOne({
     _id: "A23CS0002",
     name: "Danial Afiq",
@@ -14,6 +15,7 @@ db.users.insertOne({
     createdAt: new Date("2024-12-01")
 })
 
+// Insert multiple users into the users collection using insertMany()
 db.users.insertMany([{
     _id: "A23CS0003",
     name: "Fathi Alif",
@@ -41,6 +43,7 @@ db.users.insertMany([{
     createdAt: new Date("2024-12-01")
 }])
 
+// Insert multiple books into the books collection using insertMany()
 db.books.insertMany([{
     _id: "B002",
     title: "Introduction to Algorithms",
@@ -97,6 +100,7 @@ db.books.insertMany([{
     createdAt: new Date("2014-01-15")
 }])
 
+// Insert multiple loans into the loans collection using insertMany()
 db.loans.insertMany([{
     _id: "L002",
     userId: "A23CS0002",
@@ -134,6 +138,7 @@ db.loans.insertMany([{
     status: "RETURNED"
 }])
 
+// Insert multiple fines into the fines collection using insertMany()
 db.fines.insertMany([{
     _id: "F002",
     loanId: "L002",
