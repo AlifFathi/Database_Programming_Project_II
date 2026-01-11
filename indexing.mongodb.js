@@ -1,9 +1,9 @@
 use("libraryDB");
 
-// 1. Single Field Index (userId)
-// Creates an index on the userId field in the loans collection
-db.loans.createIndex({ userId: 1 })
-// Explaination : A single-field index on userId in loans helps quickly find all loans of a user as admin need to check the loan history of a user by userId.
+// 1. Single Field Index (name)
+// Creates an index on the name field in the users collection
+db.users.createIndex({ name: 1 })
+// Explaination : A single-field index on name in users helps quickly retrieve users in alphabetical order as the index already maintains sorted data for efficient sorting operations.
 
 // 2. Compound Index (userId and payment.status)
 // Creates a compound index on userId and payment.status fields in the fines collection
